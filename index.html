@@ -4,14 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>文件库</title>
+    
+    <!-- 依赖的 JS 和 CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
     <link rel="prefetch" href="/assets/main.mjs" />
     <link rel="prefetch" href="/assets/MimeIcon.vue" />
     <link rel="stylesheet" href="/assets/main.css" />
-    <link rel="manifest" href="/assets/manifest.json" />
-    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+    <!-- ================== START: 全能图标配置 ================== -->
+
+    <!-- [必须] 主图标，兼容性最强。请将'favicon.ico'文件放在【项目根目录】 -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    
+    <!-- [推荐] 苹果设备图标。请将'apple-touch-icon.png'(180x180)放在【assets文件夹】 -->
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- [必须] PWA & 安卓图标配置文件。请将'manifest.webmanifest'文件放在【assets文件夹】 -->
+    <link rel="manifest" href="/assets/manifest.webmanifest" />
+    
+    <!-- ================== END: 全能图标配置 ================== -->
   </head>
   <body>
     <div id="app"></div>
@@ -52,3 +65,4 @@
     <script type="module"></script>
   </body>
 </html>
+
