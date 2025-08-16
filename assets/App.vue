@@ -11,14 +11,11 @@
       @createFolder="createFolder"
     ></UploadPopup>
     <button class="upload-button circle" @click="showUploadPopup = true">
-      <img
-        style="filter: invert(100%)"
-        src="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/png/file/upload_file/materialicons/36dp/2x/baseline_upload_file_black_36dp.png"
-        alt="Upload"
-        width="36"
-        height="36"
-        @contextmenu.prevent
-      />
+      <!-- ========== 修改点 3：将上传按钮的外部图片替换为内联 SVG ========== -->
+      <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36" fill="white"  @contextmenu.prevent>
+        <path d="M0 0h24v24H0V0z" fill="none"/>
+        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM9 15v4H7v-4H5l4-4 4 4h-2zm5-9V4l4 4h-4z"/>
+      </svg>
     </button>
     <div class="app-bar">
       <input type="search" v-model="search" aria-label="Search" />
@@ -54,7 +51,6 @@
           @contextmenu.prevent
         >
           <div class="file-icon">
-            <!-- ========== 修改点 1：将外部图片替换为内联 SVG ========== -->
             <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36" fill="#5f6368">
               <path d="M0 0h24v24H0V0z" fill="none"/>
               <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
@@ -74,7 +70,6 @@
           "
         >
           <div class="file-icon">
-            <!-- ========== 修改点 2：将外部图片替换为内联 SVG ========== -->
             <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 24 24" width="36" fill="#5f6368">
               <path d="M0 0h24v24H0V0z" fill="none"/>
               <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
